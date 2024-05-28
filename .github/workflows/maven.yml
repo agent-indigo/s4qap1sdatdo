@@ -17,7 +17,7 @@ on:
 jobs:
   build:
 
-    runs-on: ubuntu-latest-lts
+    runs-on: ubuntu-jammy
 
     steps:
     - uses: actions/checkout@v4
