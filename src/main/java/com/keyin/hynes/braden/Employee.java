@@ -1,4 +1,4 @@
-package com.keyin;
+package com.keyin.hynes.braden;
 import java.util.Objects;
 public class Employee {
     private int id;

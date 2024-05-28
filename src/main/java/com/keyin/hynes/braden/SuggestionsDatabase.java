@@ -1,4 +1,4 @@
-package com.keyin;
+package com.keyin.hynes.braden;
 import java.util.HashMap;
 import java.util.Map;
 public class SuggestionsDatabase {

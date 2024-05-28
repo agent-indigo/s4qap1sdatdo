@@ -1,4 +1,4 @@
-package com.keyin;
+package com.keyin.hynes.braden;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
