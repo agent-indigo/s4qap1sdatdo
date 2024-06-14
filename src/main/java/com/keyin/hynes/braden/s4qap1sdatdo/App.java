@@ -2,7 +2,7 @@ package com.keyin.hynes.braden.s4qap1sdatdo;
 import java.nio.file.Paths;
 public class App {
     private static SuggestionEngine suggestionEngine;
-    public App() {
+    private App() {
         App.suggestionEngine = new SuggestionEngine();
     }
     public static final void main(String[] args) throws Exception {
