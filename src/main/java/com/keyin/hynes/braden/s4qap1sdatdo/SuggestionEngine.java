@@ -21,14 +21,6 @@ public final class SuggestionEngine {
     private Map<String, Long> collectedSuggestions;
     public SuggestionEngine() {
         this.wordSuggestionDB = new SuggestionsDatabase();
-        this.deletes = null;
-        this.replaces = null;
-        this.inserts = null;
-        this.transposes = null;
-        this.e1 = null;
-        this.e2 = null;
-        this.suggestions = null;
-        this.collectedSuggestions = null;
     }
     /**
      *   Based on algorithm from http://norvig.com/spell-correct.html
