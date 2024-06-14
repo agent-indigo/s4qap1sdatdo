@@ -7,16 +7,19 @@ import org.mockito.Mockito;
 import org.mockito.junit.jupiter.MockitoExtension;
 import java.nio.file.Paths;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 @ExtendWith(MockitoExtension.class)
 public class SuggestionEngineTest {
     private SuggestionEngine suggestionEngine;
     private Map<String,Integer> testWordMap;
+    private List<String> suggestions;
     @Mock
     private SuggestionsDatabase mockSuggestionDB;
     public SuggestionEngineTest() {
         this.suggestionEngine = new SuggestionEngine();
         this.testWordMap = new HashMap<String, Integer>();
+        this.suggestions = List.of(suggestionEngine.generateSuggestions("hellw"));
     }
     // submissions
     @Test
@@ -33,6 +36,11 @@ public class SuggestionEngineTest {
         suggestionEngine.loadDictionaryData(Paths.get(ClassLoader.getSystemResource("words.txt").getPath()));
         System.out.println(suggestionEngine.generateSuggestions("ello"));
         Assertions.assertTrue(suggestionEngine.generateSuggestions("ello").contains("cello"));
+    }
+    @Test
+    public void testSuggestionLimit() throws Exception {
+        suggestionEngine.loadDictionaryData(Paths.get(ClassLoader.getSystemResource("words.txt").getPath()));
+        Assertions.assertTrue(suggestions.size() <= 10);
     }
     // givens
     @Test
