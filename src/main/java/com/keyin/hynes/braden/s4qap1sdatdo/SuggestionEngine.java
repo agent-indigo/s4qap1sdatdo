@@ -9,7 +9,7 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
-public class SuggestionEngine {
+public final class SuggestionEngine {
     private SuggestionsDatabase wordSuggestionDB;
     private Stream<String> deletes;
     private Stream<String> replaces;

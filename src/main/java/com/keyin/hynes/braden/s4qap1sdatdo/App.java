@@ -1,11 +1,11 @@
 package com.keyin.hynes.braden.s4qap1sdatdo;
 import java.nio.file.Paths;
 public class App {
-    private SuggestionEngine suggestionEngine;
+    private static SuggestionEngine suggestionEngine;
     public App() {
-        this.suggestionEngine = new SuggestionEngine();
+        App.suggestionEngine = new SuggestionEngine();
     }
-    public void main(String[] args) throws Exception {
+    public static final void main(String[] args) throws Exception {
         if (args.length != 1) {
             System.out.println("USAGE: " + SuggestionEngine.class.getName() + " <word to generateSuggestions>");
         }

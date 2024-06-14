@@ -10,7 +10,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 @ExtendWith(MockitoExtension.class)
-public class SuggestionEngineTest {
+public final class SuggestionEngineTest {
     private SuggestionEngine suggestionEngine;
     private Map<String,Integer> testWordMap;
     private List<String> suggestions;
